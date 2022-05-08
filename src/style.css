@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e5e5f7;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f797 10px ), repeating-linear-gradient( #444df71d, #444df775 );
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main h1{
+    color: #210739;
+    font-size: 1.8rem;
+}
+
+main form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: #767bf3;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+main form input{
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 100%;
+    color: #6e87f9;
+    outline: 4px solid #a5b5fc;
+    border:0;
+    text-align: center;
+}
+
+main form input:focus{
+    outline: 4px solid #12236b;
+}
+main form button{
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0 auto;
+    font-weight: bold;
+    background-color: #B56EF9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px #591f90;
+    border: 1px solid transparent;
+}
+main form button:active{
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px;
+    border: 1px solid #591f9053;
+}
+
+main section p#output{
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    min-height: 150px;
+    color: #4f1981;
+    text-shadow: 3px 3px #ffffff;
+}
+
+main section .modal{
+    text-align: center;
+    background-color: #1a329b;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 5rem 1rem;
+    color: #fff;
+    display: none;
+    z-index: 1001;
+    box-shadow: 0 0 10px rgb(86, 86, 86);
+}
+
+main section #close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #310c2d68;
+    display: none;
+}
+
