@@ -2,7 +2,7 @@ const btn = document.getElementById('btn');
 const form = document.getElementById('form');
 const dni = document.getElementById('dni');
 const output = document.getElementById('output');
-const reg = new RegExp('[0-9]{8}$');
+const reg = new RegExp('^[0-9]{8}$');
 const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close');
 const overlay = document.getElementById('overlay');
@@ -27,7 +27,7 @@ function calculateLetter(){
    }else{
         let elementP = document.createElement('p');
         let textModal = modal.appendChild(elementP)
-        textModal.innerHTML=`<h3>Formato incorrecto</h3>
+        textModal.innerHTML=`<h3 style="margin-bottom:1rem">Formato incorrecto</h3>
         <p>recuerda: son los 8 dígitos de tu dni sin letra</p><span id="close">X</span>`;
         modal.style.display = 'block';
         overlay.style.display = 'block';
